@@ -17,6 +17,6 @@ while parsed['paging']['is_end'] == False:
 		result.write(content+'\n')
 	response = urllib.request.urlopen(parsed['paging']['next']).read()
 	parsed = json.loads(response)
-	print("make 20/{}".format(parsed['paging']['total']))
+	print("make 20/{}".format(parsed['paging']['totals']))
 
 result.close()
